@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown personalizado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <main class="tarjeta">
+        <h1>Dropdown personalizado</h1>
+        <p id="etiqueta">Elige tu lenguaje favorito:</p>
+
+        <div class="dropdown" id="dropdown">
+            <button type="button" class="boton" id="boton" aria-haspopup="listbox" aria-expanded="false"
+                aria-labelledby="etiqueta">
+                <span id="textoBoton">Selecciona una opción</span>
+                <span class="flecha">▾</span>
+            </button>
+
+            <ul class="lista" id="lista" role="listbox" aria-labelledby="etiqueta">
+                <li role="option" tabindex="0">JavaScript</li>
+                <li role="option" tabindex="0">Python</li>
+                <li role="option" tabindex="0">Java</li>
+                <li role="option" tabindex="0">PHP</li>
+                <li role="option" tabindex="0">C#</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

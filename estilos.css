@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.tarjeta {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* ESTADO 1: por defecto (placeholder en gris) */
+.boton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    font-size: 1rem;
+    background: white;
+    color: #888;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.boton:hover,
+.boton:focus {
+    border-color: #4a90d9;
+    outline: none;
+}
+
+.flecha {
+    transition: transform 0.2s;
+}
+
+/* ESTADO 2: abierto (se muestran las opciones) */
+.lista {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+    background: white;
+    border: 2px solid #4a90d9;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown.abierto .lista {
+    display: block;
+}
+
+.dropdown.abierto .boton {
+    border-color: #4a90d9;
+}
+
+.dropdown.abierto .flecha {
+    transform: rotate(180deg);
+}
+
+.lista li {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.lista li:hover,
+.lista li:focus {
+    background: #eaf2fb;
+    outline: none;
+}
+
+/* ESTADO 3: seleccionado (texto normal y opción resaltada) */
+.dropdown.con-valor .boton {
+    color: #111;
+    font-weight: bold;
+}
+
+.lista li.seleccionada {
+    background: #4a90d9;
+    color: white;
+    font-weight: bold;
+}
